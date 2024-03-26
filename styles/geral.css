@@ -1,0 +1,62 @@
+/* FONTES */
+@font-face {
+    font-family: NetflixSansRegular;
+    src: url(../fonts/NetflixSans-Regular.otf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: NetflixSansBold;
+    src: url(../fonts/NetflixSans-Bold.otf);
+    font-weight: bold;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --vermelhoNetflix:#Af0000;
+    --cinza:#564d4d;
+    --vermelhoEscuroNetflix:#831010;
+    --branco:#fff;
+    --preto:#000;
+}
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#logo{
+    height: 60px;
+}
+aside img{
+    height: 45px;
+}
+
+nav ul{
+    list-style:none;
+    display: flex;
+    gap: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: var(--branco);
+}
+a:hover{
+    color:var(--vermelhoNetflix);
+}
