@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="./images/logo/simbolo/01_Netflix_Symbol_RGB/Netflix_Symbol_RGB.png" type="image/x-icon">
     <!-- Landscape = Paisagem -->
     <!-- Portrait = Retrato -->
-    <link rel="stylesheet" href="./styles/@media.css" media="screen and (orientation:landscape)">
+    <!-- screen and (orientation:landscape) -->
+    <link rel="stylesheet" href="./styles/@media.css" media="screen and (max-width:804px)">
 </head>
 <body>
     <header>
@@ -43,24 +44,63 @@
 
         <!-- header lado direito mobile -->
         <aside class="menuMobile">
-            <img src="./images/interface icons/menu.svg" alt="Menu">
+            <img onclick="abrirMenu()" src="./images/interface icons/menu.svg" alt="Menu" id="abrirMenu">
 
         </aside>
     </header>
 
 
     <main>
+        <div id="menuMobileShow">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Séries Tv</a></li>
+                    <li><a href="#">Em Alta</a></li>
+                    <li><a href="#">Terror</a></li>
+                    <li><a href="#">Suspense</a></li>
+                    <li><a href="#">Top da semana</a></li>
+                    <img onclick="fecharMenu()" id="fecharMenu" src="./images/interface icons/fechar.svg" alt="Botão para fechar menu">
+                </ul>
+            </nav>
+        </div>
         <!-- Imagens Responsivas -->
        <!--- <picture>
             <img src="./images/ícones de usuário/178 - P8qZD6Y.png" alt="">
             <source media="(min-width: 650px)" srcset="./images/ícones de usuário/102 - 1SdlYmc.png">
             <source media="(min-width: 465px)" srcset="/images/ícones de usuário/101 - 4HP8NGK.png">
         </picture> --->
+        <div class="bannerGrupo" id="bannerNarcos">
+            <div class="bannerText">
+                <h3>NETFLIX ORIGINALS</h3>
+                <H1>NARCOS</H1>
+                <H5>TEMPORADA 3</H5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur nisi enim omnis aliquam, exercitationem eaque temporibus natus nemo. Est animi sunt iste provident deleniti reprehenderit tenetur corporis, assumenda ut?</p>
+                <div class="btnBanner">
+                    <button type="button">
+                        <img src="./images/interface icons/play.svg" alt="Botão para assistir trailer">
+                        Assitir
+                    </button>
+                    <button type="button">
+                        <img src="./images/interface icons/add.svg" alt="Botão para adicionar a playlist">
+                        Adicionar a lista
+                    </button>
+                </div>
+            </div>
+        </div>
        
     </main>
 
 
     <footer></footer>
+    <script>
+        function abrirMenu(){
+            menuMobileShow.style.display = "flex"
+        }
+        function fecharMenu(){
+            menuMobileShow.style.display="none"
+        }
+    </script>
 </body>
 </html>
 
